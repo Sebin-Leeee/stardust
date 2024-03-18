@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useRouter } from "next/router";
 import Navbar from "./components/navbar/navbar";
@@ -34,12 +35,10 @@ const Compatibility = () => {
         return <div>Compatibility details for Sagittarius</div>;
       case "Capricorn":
         return <div>Compatibility details for Capricorn</div>;
-
       default:
         return <div>Compatibility details for other signs</div>;
     }
   };
-
   return (
     <div className="bg-dark h-screen font-josefine">
       <Navbar />
@@ -49,8 +48,10 @@ const Compatibility = () => {
           {getCompatibilityContent(sign as string)}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
+
 
 export default Compatibility;
